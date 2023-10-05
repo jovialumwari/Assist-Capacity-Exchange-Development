@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block title %}CapX Project{% endblock %}
+
+{% block content %}
+  <section class="hero text-center">
+    <div class="container">
+        <h1 class="display-4">Welcome to CapX</h1>
+        <p class="lead">Connecting Wikimedians and solving bugs together!</p>
+        <a href="{% url 'register_bug' %}" class="btn btn-primary">Report a Bug</a>
+        <a href="{% url 'bug_list' %}" class="btn btn-secondary">View Bug List</a>
+    </div>
+  </section>
+
+  <section class="project-overview my-5">
+    <div class="container">
+        <h2 class="text-center">Project Overview</h2>
+        <p>The Capacity Exchange (CapX) is a project developing a sociotechnical platform for peer-to-peer connection and knowledge sharing towards sustainable, community-based capacity-building within the Wikimedia Movement. It intends to deliver an interactive, online platform, backed by a database, which will allow wikimedians to: publish information about themselves, their affiliates, and informal groups; conduct searches and access information published by others; connect with peers for knowledge exchange. The platform is intended to be responsive, intuitive, and accessible to all wikimedia users.</p>
+    </div>
+  </section>
+
+  <!--  more sections as needed -->
+{% endblock %}
