@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>List of Bugs</h2>
+  <ul>
+    {% for bug in bugs %}
+      <li><a href="{% url 'view_bug' bug.id %}">{{ bug.description }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

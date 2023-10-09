@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2 class="mt-5">Bug Details</h2>
+    <ul class="list-group mt-4">
+      <li class="list-group-item"><strong>Description:</strong> {{ bug.description }}</li>
+      <li class="list-group-item"><strong>Bug Type:</strong> {{ bug.bug_type }}</li>
+      <li class="list-group-item"><strong>Report Date:</strong> {{ bug.report_date }}</li>
+      <li class="list-group-item"><strong>Status:</strong> {{ bug.status }}</li>
+    </ul>
+  </div>
+{% endblock %}

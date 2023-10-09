@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2 class="mt-5">Register a Bug</h2>
+    <form method="post" class="mt-4">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+      <div class="form-group">
+        {{ form.description.label_tag }}
+        {{ form.description }}
+      </div>
+      <div class="form-group">
+        {{ form.bug_type.label_tag }}
+        {{ form.bug_type }}
+      </div>
+      <div class="form-group">
+        {{ form.report_date.label_tag }}
+        {{ form.report_date }}
+    </div>
+    
+      <div class="form-group">
+        {{ form.status.label_tag }}
+        {{ form.status }}
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+{% endblock %}
